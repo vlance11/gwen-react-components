@@ -2,15 +2,15 @@ name: GH-Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     name: GH-Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@v2
       - name: Build & Push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
