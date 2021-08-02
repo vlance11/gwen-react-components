@@ -1,6 +1,5 @@
 name: Auto approve
-
-on: pull_request
+on: pull_request_target
 
 jobs:
   auto-approve:
@@ -17,6 +16,7 @@ jobs:
     steps:
       - uses: actions/github-script@v4.0.2
         with:
+          github-token: ${{ secrets.GWENNIFER_GITHUB_PAT }}
           script: |
             github.issues.createComment({
               issue_number: context.issue.number,
