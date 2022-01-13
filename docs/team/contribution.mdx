@@ -1,0 +1,24 @@
+---
+name: Team contribution
+route: /team/contribution
+menu: Team
+edit: false
+---
+
+import { Playground, Props } from "docz"
+import { TeamComponent } from "../../src"
+import { TeamData } from "./data"
+
+# Team Contribution Component
+
+Use this component to display the total points of a team and the total contribution of a user to that team
+
+<Playground>
+	<div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", flexDirection: "row", height: "700px" }}>
+		<div style={{ width: "400px", height: "500px", background: "#fff", borderRadius: "10px", boxShadow: "0px 0px 6px 6px rgba(0, 0, 0, 0.25)" }}>
+			<TeamComponent data={TeamData} teamPoints={123456} contribution={1234} />
+		</div>
+	</div>
+</Playground>
+
+<Props of={TeamComponent} />

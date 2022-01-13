@@ -10,6 +10,6 @@ export default {
 	},
 	editBranch: "dev",
 	base: "/gwen-react-components/",
-	menu: ["Getting Started", "Character", "Level", "Mission", "Achievement", "Leaderboard", "Components", "Shop"],
+	menu: ["Getting Started", "Character", "Level", "Mission", "Achievement", "Leaderboard", "Components", "Shop", "Team"],
 	ignore: ["README.md"],
 }
