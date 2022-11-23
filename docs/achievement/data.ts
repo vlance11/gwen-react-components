@@ -1,5 +1,12 @@
 export const AchievementSharer = {
+	id: "achievement-sharer",
+	behaviorId: "achievement-sharer",
+	tags: ["social"],
+	description: "Share your achievements with your friends",
+	icons:
+		"https://static-assets-prod.epicgames.com/fortnite/static/fortnite-game/Content/Athena/Items/Cosmetics/Emotes/EID_ShareYourAchievements/EID_ShareYourAchievements.png",
 	title: "Sharing is Caring <3",
+	active: true,
 	tiers: [
 		{
 			title: "First Time Sharer",

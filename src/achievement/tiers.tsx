@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { ProgressBar } from "../components/progress-bar"
 import { AchievementData, RewardIcons } from "../types"
 import { getAchievementIcon } from "./icon"
 
-interface Props {
+export interface Props {
 	achievement: AchievementData
 	rewardIcons?: RewardIcons
 }
@@ -20,9 +19,9 @@ export class AchievementTiers extends React.PureComponent<Props, State> {
 	}
 
 	render() {
-		const { achievement } = this.props
+		// const { achievement } = this.props
 		const { active, selected } = this.state
-		const tier = achievement.tiers[selected]
+		// const tier = achievement.tiers[selected]
 		return (
 			<Wrapper>
 				<AchievementIcons>
@@ -35,7 +34,7 @@ export class AchievementTiers extends React.PureComponent<Props, State> {
 						)
 					})}
 				</AchievementIcons>
-				<ProgressBar completed={tier.progress} amount={tier.amount} />
+				{/* <ProgressBar completed={tier.progress} amount={tier.amount} /> */}
 			</Wrapper>
 		)
 	}
