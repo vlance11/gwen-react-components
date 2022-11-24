@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = () => createGlobalStyle`
+	* {
+		font-family: "Source Sans Pro",sans-serif
+	}
 	.gwen * {
 		box-sizing: border-box;
 	}

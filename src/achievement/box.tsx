@@ -4,7 +4,7 @@ import { AchievementData } from "../types"
 import { AchievementProgress } from "./components/achievement-progress"
 import { getAchievementIcon } from "./icon"
 
-interface Props {
+export interface Props {
 	data: AchievementData
 	openDetails: (data: AchievementData) => void
 }
