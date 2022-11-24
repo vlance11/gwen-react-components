@@ -1,19 +1,29 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 import React from "react"
 import { AchievementTiers } from "../achievement/tiers"
+import StorybookThemeProvider from "./theme/StorybookThemeProvider"
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
 	title: "Achievement/Tiers",
 	component: AchievementTiers,
 } as ComponentMeta<typeof AchievementTiers>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof AchievementTiers> = (args) => <AchievementTiers {...args} />
+const Template: ComponentStory<typeof AchievementTiers> = (args) => (
+	<StorybookThemeProvider>
+		<div
+			style={{
+				width: "calc(100% - 40px)",
+				background: "#434343",
+				padding: "20px",
+			}}
+		>
+			<AchievementTiers {...args} />
+		</div>
+	</StorybookThemeProvider>
+)
 
-export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+export const Default = Template.bind({})
+Default.args = {
 	achievement: {
 		id: "achievement-sharer",
 		behaviorId: "achievement-sharer",
@@ -53,7 +63,6 @@ Primary.args = {
 			},
 		],
 	},
-	// example of Partial<Record<string, string>>'.
 	rewardIcons: {
 		"1": "https://i.imgur.com/1JZ9Z9A.png",
 		"2": "https://i.imgur.com/1JZ9Z9A.png",
